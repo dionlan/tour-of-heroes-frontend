@@ -2,12 +2,16 @@
   <span>{{title}}</span>
   <span class="icon-favorite"></span>
 
+  <button mat-icon-button aria-label="Dashboard" routerLink="/dashboard" matTooltip="Dashboard">
+    <mat-icon>dashboard</mat-icon>
+  </button>
+
   <button mat-icon-button aria-label="Heroes List" routerLink="/heroes" matTooltip="Heroes list">
     <mat-icon>sports_martial_arts</mat-icon>
   </button>
 </mat-toolbar>
 
-<div class="content">
+<div class="content" fxLayoutGap="12px">
   <router-outlet></router-outlet>
   <app-messages></app-messages>
 </div>
