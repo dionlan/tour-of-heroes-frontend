@@ -18,6 +18,5 @@ export class AppComponent {
     icon: 'sports_martial_arts',
     routerLink: '/heroes',
     toolTipText: 'Heroes'
-  },
-]
+  }]
 }
