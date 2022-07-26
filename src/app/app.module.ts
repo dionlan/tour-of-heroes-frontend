@@ -5,14 +5,9 @@ import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
-
-
-
 import { DashboardComponent } from './dashboard/dashboard.component'
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MaterialModule } from './material/material.module';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -20,16 +15,14 @@ import { MaterialModule } from './material/material.module';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent,
     DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    CoreModule,
     AppRoutingModule,
-    FlexLayoutModule,
-    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
