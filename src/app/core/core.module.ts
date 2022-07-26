@@ -5,11 +5,12 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './components/page-not-found.component';
 
 /**
  * Modulo que eh compartilhado por toda a aplicacao
  */
-const COMPONENTS = [ MessagesComponent, ToolbarComponent ];
+const COMPONENTS = [ MessagesComponent, ToolbarComponent, PageNotFoundComponent ];
 const MODULES = [ FlexLayoutModule, MaterialModule, RouterModule]
 
 @NgModule({

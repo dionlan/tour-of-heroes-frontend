@@ -2,13 +2,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { HeroDetailComponent } from './heroes/components/hero-detail/hero-detail.component';
-import { HeroesComponent } from './heroes/components/heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   declarations: [ AppComponent ],
@@ -18,9 +14,10 @@ import { HeroesModule } from './heroes/heroes.module';
     FormsModule,
     BrowserAnimationsModule,
 
-    //feature
-    DashboardModule,
-    HeroesModule,
+    //features são carregadas quando a aplicação é iniciada no main.js
+    //No Lazy-Loading Feature será removido para ser carregado os módulos sob demanda, apenas quando acessado
+    /*DashboardModule,
+    HeroesModule,*/
 
     //app
     CoreModule,
