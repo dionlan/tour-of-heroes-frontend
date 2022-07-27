@@ -24,7 +24,7 @@ export class HeroesComponent implements OnInit{
     3 = complete
   */
   getHeroes(): void{
-    this.heroService.getHeroes().subscribe(x => {
+    this.heroService.getAll().subscribe(x => {
       this.heroes = x
     }, error => {
       console.error(error);

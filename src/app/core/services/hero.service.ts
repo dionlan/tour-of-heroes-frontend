@@ -21,19 +21,27 @@ export class HeroService {
   constructor(private http: HttpClient, private messageService: MessageService) {}
 
   //GET /heroes
-  getHeroes(): Observable<Hero[]> {
+  getAll(): Observable<Hero[]> {
     return this.http
     .get<Hero[]>(this.heroesUrl)
-    .pipe(
-      tap((heroes: any) => this.log(`fetched ${heroes.length} hero(es)`)));
+      .pipe(
+        tap((heroes: any) => this.log(`fetched ${heroes.length} hero(es)`)));
   }
 
   //GET /heroes/id
-  getHero(id: number): Observable<Hero> {
+  getOne(id: number): Observable<Hero> {
     return this.http
     .get<Hero>(`${this.heroesUrl}/${id}`)
-    .pipe(
-      tap((hero) => this.log(`fetched hero=${id} and name=${hero.name}`)));
+      .pipe(
+        tap((hero) => this.log(`fetched hero=${id} and name=${hero.name}`)));
+  }
+
+  //PUT /heroes/id
+  update(hero: Hero): Observable<Hero> {
+    return this.http
+    .put<Hero>(`${this.heroesUrl}/${hero.id}`, hero)
+      .pipe(
+        tap((hero) => this.log(`updated hero id=${hero.id} and name=${hero.name}`)));
   }
 
   private log(message: string): void {
