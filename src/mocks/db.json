@@ -2,7 +2,7 @@
   "heroes": [
     {
       "id": 1,
-      "name": "Wolverine"
+      "name": "Wolverine 2"
     },
     {
       "id": 2,
@@ -53,8 +53,8 @@
       "id": 13
     },
     {
-      "name": "The Flash",
-      "id": 14
+      "id": 14,
+      "name": "The Flash 1"
     },
     {
       "name": "Bill Hero",
