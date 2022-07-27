@@ -26,7 +26,7 @@
     },
     {
       "id": 7,
-      "name": "Capitã Marvel"
+      "name": "Capitã Marvel 1"
     },
     {
       "id": 8,
@@ -39,6 +39,26 @@
     {
       "id": 10,
       "name": "Capitão América"
+    },
+    {
+      "name": "Dionlan 1",
+      "id": 11
+    },
+    {
+      "name": "Teste Angular",
+      "id": 12
+    },
+    {
+      "name": "asdfasdf",
+      "id": 13
+    },
+    {
+      "name": "The Flash",
+      "id": 14
+    },
+    {
+      "name": "Bill Hero",
+      "id": 15
     }
   ]
 }

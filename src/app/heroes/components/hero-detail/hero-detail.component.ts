@@ -12,6 +12,8 @@ import { HeroService } from "../../../core/services/hero.service";
 
 export class HeroDetailComponent implements OnInit{
   hero!: Hero;
+  isEditing!: boolean;
+
   constructor(private heroService: HeroService, private location: Location, private route: ActivatedRoute){}
 
   ngOnInit(): void {
@@ -19,20 +21,31 @@ export class HeroDetailComponent implements OnInit{
   }
 
   getHero(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.heroService.getOne(id).subscribe(x => {
-    this.hero = x;
-   });
+    const paramId = this.route.snapshot.paramMap.get('id');
+
+    if(paramId === 'new'){
+      this.isEditing = false;
+      this.hero = { name: ''} as Hero;
+    }else{
+      this.isEditing = true;
+      const id = Number(paramId);
+      this.heroService.getOne(id).subscribe(hero => {
+        this.hero = hero;
+      });
+    }
   }
 
   goBack(): void {
     this.location.back();
   }
 
-  save(): void {
-    this.heroService.update(this.hero).subscribe(() => this.goBack());
+  create(): void {
+    this.heroService.create(this.hero).subscribe(() => this.goBack());
   }
 
+  update(): void {
+    this.heroService.update(this.hero).subscribe(() => this.goBack());
+  }
   /* se vier vazio = ''
   * negar o vazio 1x = ! => true
   * negar o vazio 2x = !! => true
