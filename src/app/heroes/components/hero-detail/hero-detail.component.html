@@ -1,7 +1,7 @@
 
   <h1>{{ isEditing ? "Update" : "Create" }} Hero </h1>
 
-<form [formGroup]="form" novalidade>
+<form [formGroup]="form" novalidate>
   <mat-card>
     <mat-card-content fxLayout="column">
       <mat-form-field *ngIf="isEditing">

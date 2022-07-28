@@ -56,7 +56,7 @@ export class HeroDetailComponent implements OnInit{
 
     if(valid){
       const hero = {
-        name: value
+        name: value.name
       } as Hero;
       this.heroService.create(hero).subscribe(() => this.goBack());
     }else{
@@ -71,7 +71,8 @@ export class HeroDetailComponent implements OnInit{
       const hero: Hero = {
         id: this.hero.id,
         name: value.name
-      };
+      }
+
       this.heroService.update(hero).subscribe(() => this.goBack());
     }else{
       this.showErrorMsg();

@@ -10,6 +10,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
 /**
  * Modulo que eh compartilhado por toda a aplicacao
@@ -18,7 +19,8 @@ const COMPONENTS = [
   MessagesComponent,
   ToolbarComponent,
   PageNotFoundComponent,
-  LoadingComponent ];
+  LoadingComponent,
+  ConfirmationDialogComponent ];
 
 const MODULES = [ FlexLayoutModule, MaterialModule, RouterModule]
 
