@@ -1,0 +1,9 @@
+.input-width {
+  width: 50%;
+  /*
+  Se a visualização for no celular, ocupa 100%, se nao ocula 50%
+  */
+  @media only screen and (max-width: 600px){
+    width: 100%;
+  }
+}
