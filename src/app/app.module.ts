@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [ AppComponent ],
@@ -20,10 +21,13 @@ import { AuthModule } from './auth/auth.module';
     /*DashboardModule,
     HeroesModule,*/
 
+    //third-party
+    FlexLayoutModule,
+
     //app
     CoreModule,
-    AppRoutingModule,
-    AuthModule
+    AuthModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

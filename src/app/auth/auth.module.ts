@@ -9,9 +9,9 @@ import { AuthRoutingModule } from './auth-routing.module';
   declarations: [ LoginComponent ],
   imports: [
     CommonModule,
-    AuthRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
+    AuthRoutingModule
 
   ]
 })

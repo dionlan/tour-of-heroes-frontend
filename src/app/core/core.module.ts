@@ -16,7 +16,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 /**
  * Modulo que eh compartilhado por toda a aplicacao
  */
-const COMPONENTS = [
+const CORE_COMPONENTS = [
   MessagesComponent,
   ToolbarComponent,
   PageNotFoundComponent,
@@ -26,9 +26,9 @@ const COMPONENTS = [
 const MODULES = [ FlexLayoutModule, MaterialModule, RouterModule]
 
 @NgModule({
-  declarations: [ COMPONENTS ],
+  declarations: [ CORE_COMPONENTS ],
   imports: [ MODULES, CommonModule ],
-  exports: [ COMPONENTS, MODULES ],
+  exports: [ CORE_COMPONENTS ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

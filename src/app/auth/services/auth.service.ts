@@ -15,13 +15,22 @@ export class AuthService {
 
   login(credentials: Credentials): void {
     localStorage.setItem('token', credentials.password);
-    this.loggedIn.next(true);
+    this.updateLoggedIn();
     this.router.navigate(['/dashboard'])
   }
 
   logout(): void {
     localStorage.clear();
-    this.loggedIn.next(false);
+    this.updateLoggedIn();
     this.router.navigate(['/login'])
+  }
+
+  updateLoggedIn(): void {
+    const token = localStorage.getItem('token');
+    if(token){
+      this.loggedIn.next(true);
+    }else{
+      this.loggedIn.next(false);
+    }
   }
 }
