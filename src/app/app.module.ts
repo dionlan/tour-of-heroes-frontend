@@ -25,8 +25,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule,
 
     //app
-    CoreModule,
     AuthModule,
+    CoreModule,
     AppRoutingModule
   ],
   providers: [],
